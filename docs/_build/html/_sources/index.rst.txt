@@ -13,7 +13,7 @@ This documentation will give a runthrough of how this project works.
    :maxdepth: 2
    :caption: Contents:
 
-   content/average-squares-doc
+   content/average-squares-docs
 
 
 Indices and tables
