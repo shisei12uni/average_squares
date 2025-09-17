@@ -30,7 +30,7 @@ def average_of_squares(list_of_numbers, list_of_weights=None):
         for number, weight
         in zip(list_of_numbers, effective_weights)
     ]
-    return sum(squares)/sum(list_of_weights)
+    return sum(squares)/sum(effective_weights)
 
 
 def convert_numbers(list_of_strings):
@@ -54,10 +54,11 @@ def convert_numbers(list_of_strings):
 if __name__ == "__main__":
     parser = ArgumentParser(description="Weighted average of the square of a list of values.")
     parser.add_argument("numbers", type=int, nargs="+", help="the list of numbers")
+    parser.add_argument("--weights", "-w", type=float, nargs="+", help="the list of weights")
     arguments= parser.parse_args()  
 
     numbers = arguments.numbers
-    weights = None     
+    weights = arguments.weights
     
     result = average_of_squares(numbers, weights)
     
